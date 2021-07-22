@@ -1,0 +1,448 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    text-decoration: none;
+    padding: 0;
+    font-family: 'Commissioner', sans-serif;
+    outline: 0;
+}
+
+:root {
+    --Moderatecyan: #3cb4ac;
+    --Darkcyan: #147b74;
+    --Black: #000;
+    --Darkgray: #7a7a7a;
+}
+
+body {
+    background-color: #fafafa;
+}
+
+a {
+    color: inherit;
+}
+
+.container {
+    max-width: 1140px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: auto;
+}
+
+.clear {
+    clear: both;
+}
+
+.block {
+    display: block;
+}
+
+.none {
+    display: none;
+}
+
+p {
+    color: var(--Darkgray);
+}
+
+
+/*=============================================
+=            Header            =
+=============================================*/
+
+header {
+    background-image: url("images/image-hero-desktop.jpg");
+    background-size: cover;
+    height: 350px;
+}
+
+@media(max-width:768px) {
+    header {
+        background-image: url("images/image-hero-mobile.jpg");
+    }
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0%;
+    align-items: center;
+    color: white;
+    position: relative;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    padding: 0 15px;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+#openNav {
+    display: none;
+    user-select: none;
+}
+
+#closeNav {
+    display: none;
+}
+
+@media (max-width:576px) {
+    #openNav,
+    #closeNav {
+        cursor: pointer;
+        display: block;
+        width: 30px;
+    }
+    #closeNav {
+        display: none;
+    }
+    nav ul {
+        padding: 0;
+        display: none;
+        width: 100%;
+        background-color: white;
+        position: absolute;
+        border-radius: 5px;
+        top: 70px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        color: black;
+        /* padding: 6px; */
+    }
+    nav ul::before {
+        content: '';
+        position: absolute;
+        border-color: transparent transparent white transparent;
+        border-width: 10px;
+        right: 4px;
+        top: -20px;
+        border-style: solid;
+    }
+    nav li {
+        display: block;
+        /* margin: 10px 0; */
+        padding: 0;
+        border-bottom: 1px solid var(--Darkgray);
+    }
+    nav li:last-of-type {
+        border: 0;
+    }
+    nav li a {
+        padding: 15px 0;
+        display: block;
+        /* display: none; */
+        width: 100%;
+        /* font-weight: normal; */
+        font-size: 20px;
+        height: 100%;
+    }
+}
+
+
+/*=====  End of Header  ======*/
+
+
+/*=============================================
+=            Main            =
+=============================================*/
+
+main .top {
+    position: relative;
+    background-color: white;
+    top: -30px;
+    width: 95%;
+    text-align: center;
+    padding: 15px;
+    border-radius: 5px;
+    margin: auto;
+    z-index: 5;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+main .top h1 {
+    /* font-size: 35px; */
+    margin: 12px;
+}
+
+main .icon {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    -webkit-transform: translate(-50%, -70%);
+    -moz-transform: translate(-50%, -70%);
+    -ms-transform: translate(-50%, -70%);
+    -o-transform: translate(-50%, -70%);
+    /* margin-bottom: 500px; */
+}
+
+main .top .flex {
+    display: flex;
+    padding: 15px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+main .top .flex button {
+    background-color: var(--Darkcyan);
+    border: 0;
+    color: white;
+    padding: 15px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 14px;
+    -webkit-border-radius: 14px;
+    -moz-border-radius: 14px;
+    -ms-border-radius: 14px;
+    -o-border-radius: 14px;
+}
+
+main .top .flex p {
+    width: 200px;
+    display: flex;
+    user-select: none;
+    cursor: pointer !important;
+    justify-content: space-between;
+    height: 50px;
+    align-items: center;
+    border-radius: 30px;
+    background-color: #eee;
+}
+
+main .top .flex p span:first-of-type {
+    background-color: black;
+    height: 100%;
+    width: 50px;
+    color: white;
+    line-height: 50px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+main .top .flex p span:last-of-type {
+    padding-right: 45px;
+    color: #000;
+    font-weight: bold !important;
+}
+
+@media (max-width:576px) {
+    main .top .flex {
+        display: block;
+    }
+    main .top .flex p,
+    main .top .flex button {
+        display: block;
+        margin: 15px auto;
+    }
+    main .top .flex p {
+        width: 200px;
+        display: flex;
+        justify-content: space-between;
+        height: 50px;
+        user-select: none;
+        cursor: pointer !important;
+        align-items: center;
+        border-radius: 30px;
+        background-color: #eee;
+    }
+    main .top .flex p span:first-of-type {
+        background-color: black;
+        height: 100%;
+        width: 50px;
+        color: white;
+        line-height: 50px;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+    }
+    main .top .flex p span:last-of-type {
+        padding-right: 40px;
+        font-weight: bold;
+    }
+}
+
+.status {
+    width: 95%;
+    background-color: white;
+    margin: 10px auto;
+    padding: 55px 15px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.status .status-num {
+    display: flex;
+    text-align: left;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.status .status-num div {
+    width: calc(97% / 3);
+    margin-left: 1%;
+    margin-bottom: 15px;
+    padding-left: 30px;
+    border-left: 1px solid var(--Darkgray);
+    /* background-color: #7a7a7a; */
+    min-width: 290px;
+}
+
+.status .status-num div:first-of-type {
+    border: none;
+}
+
+.status .status-num div h1 {
+    font-size: 40px;
+    margin: 0 auto 5px;
+}
+
+.status .status-line {
+    width: 95%;
+    height: 15px;
+    margin: 20px auto 10px;
+    background-color: #eee;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.status .status-line span {
+    width: 80%;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    position: absolute;
+    height: 100%;
+    background-color: var(--Moderatecyan);
+}
+
+@media (max-width:1399px) {
+    .status .status-num div {
+        border: none;
+        text-align: center;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+}
+
+section.about {
+    margin: 40px auto 10px;
+    width: 95%;
+    background-color: white;
+    padding: 25px 25px;
+}
+
+section.about>h2 {
+    margin: 15px auto;
+}
+
+section.about p {
+    line-height: 1.7;
+    margin: 15px auto;
+}
+
+section.about article {
+    width: 95%;
+    margin: 25px auto;
+    border: 1px solid var(--Darkgray);
+    padding: 25px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+section.about article .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+section.about article .title h3 {
+    margin: 10px 0;
+}
+
+section.about article .title span {
+    color: #3cb4ac;
+    font-weight: bold;
+}
+
+section.about article button {
+    cursor: pointer;
+    border: none;
+    text-align: center;
+    width: 200px;
+    font-weight: bold;
+    margin: 15px 0;
+    height: 50px;
+    color: white;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+section.about article .last {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+section.about article.one button {
+    background-color: var(--Darkcyan);
+}
+
+section.about article.two button {
+    background-color: var(--Moderatecyan);
+}
+
+section.about article.three button {
+    background-color: var(--Darkgray);
+    cursor: default;
+}
+
+section.about article.three {
+    opacity: .4;
+}
+
+section.about article .last .txt span:first-of-type {
+    font-weight: bold;
+    font-size: 40px;
+    padding-right: 10px;
+}
+
+
+/*=====  End of Main  ======*/
